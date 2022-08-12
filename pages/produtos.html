@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Conexão Agro</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/product.css">
+</head>
+
+<body>
+    <!-- NAV BAR -->
+    <nav class="main navbar navbar-expand-lg navbar-light bg-light fixed-top" id="bgNavBar"
+        data-navbar-on-scroll="data-navbar-on-scroll">
+        <div class="container">
+            <a class="navbar-brand d-inline-flex" href="../pages/index.html">
+                <img class="imgLogo zindexText" src="../img-logo/siglas-logo.png" alt="">
+                <img class="imgLogo folhaLogo" src="../img-logo/folha-logo.png" alt="Logo coneão agro">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linksAncor"
+                aria-controls="linksAncor" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="linksAncor mb-0 d-flex flex-row" id="linksAncor">
+                <li>
+                    <a href="./index.html">Home</a>
+                </li>
+                <li>
+                    <a href="./produtos.html">Produtos</a>
+                </li>
+                <li>
+                    <a href="#">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </nav> <!-- END NAV BAR -->
+
+    <!--  SEARCH BAR AND PRODUCT LIST  -->
+    <main>
+        <section>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="sideBar">
+                        <div class="m-3">
+                            <h4>Escolha um de nossos produtos :</h4>
+                        </div>
+                        <div class="m-3">
+                            <span>Escolha uma categoria:</span>
+                        </div>
+                        <select id="category" class="form-select form-select-md">
+                            <option selected>Categorias</option>
+                            <option value="verdura">Verduras</option>
+                            <option value="legume">Legumes</option>
+                            <option value="fruta">Frutas</option>
+                            <option value="grao">Grãos</option>
+                        </select>
+                        <div class="input-group mt-5 m-3">
+                            <span>Ou se preferir pesquise o proprio item:</span>
+                        </div>
+                        <div class="mt-2">
+                            <input id="searchBar" class="form-control  searchBar" placeholder="Ex: alface"
+                                type="search">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-8 col-sm-6 col-12 pe-0">
+                    <div class="row me-0" id="cardsArea">
+                        <template id="templateCards">
+                            <div class="col-lg-4 col-sm-2 col-6 cardAreaClass p-0 m-2">
+                                <div class="p-0 imgArea">
+                                    <img class="imgCard">
+                                </div>
+                                <div class="descriptionCard ps-2 pt-1">
+                                    <h4></h4>
+                                    <p></p>
+                                </div>
+                                <div class="d-flex justify-content-around ps-2 pe-2 position-relative">
+                                    <div>
+                                        <span>Quantidade:</span>
+                                        <input type="number" class="inputQty">
+                                    </div>
+                                    <button type="button" class="btnShopCart mt-0">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main> <!-- END SEARCH BAR AND PRODUCT LIST -->
+
+    <script src="../assets/js/productList.js"></script>
+    <script src="../assets/js/scriptProduct.js"></script>
+    <script src="https://kit.fontawesome.com/1865eb5189.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

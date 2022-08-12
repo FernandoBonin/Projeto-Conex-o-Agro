@@ -9,108 +9,213 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="../assets/css/homeStyle.css">
 </head>
 
 <body>
+    <!-- NAV BAR -->
     <main class="main" id="top">
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="bgNavBar"
             data-navbar-on-scroll="data-navbar-on-scroll">
             <div class="container">
                 <a class="navbar-brand d-inline-flex" href="../pages/index.html">
-                    <img class="imgLogo siglasLogo" src="../img-logo/siglas-logo.png" alt="">
+                    <img class="imgLogo zindexText" src="../img-logo/siglas-logo.png" alt="">
                     <img class="imgLogo folhaLogo" src="../img-logo/folha-logo.png" alt="Logo coneão agro">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linksAncor"
+                    aria-controls="linksAncor" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse border-lg-0 my-2 mt-lg-0" id="navbarSupportedContent">
-                    <div class="mx-auto pt-5 pt-lg-0 d-block  d-xl-block">
-                        <p class="mb-0 fw-bold text-lg-center">Deliver to:
-                            <i class="fas fa-map-marker-alt text-warning mx-2"></i>
-                            <span class="fw-normal">Current Location</span>
-                            <span>Mirpur 1 Bus Stand, Dhaka</span>
-                        </p>
-                    </div>
-                    <form class="d-flex mt-4 mt-lg-0 ms-lg-auto ms-xl-0">
-                        <div id="search" class="input-group-icon pe-2">
-                            <i class="fas fa-search input-box-icon text-primary"></i>
-                            <input class="form-control border-0 input-box bg-100" type="search"
-                                placeholder="Search Food" aria-label="Search" />
-                        </div>
-                    </form>
-                </div>
+                <ul class="linksAncor mb-0 d-flex flex-row" id="linksAncor">
+                    <li>
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="./produtos.html">Produtos</a>
+                    </li>
+                    <li>
+                        <a href="#">Contato</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
+        </nav> <!-- END NAV BAR -->
 
-        <section class="py-5 overflow-hidden bg-primary" id="home">
-            <div class="container">
+        <!-- HOME SECTION -->
+        <section class="overflow-hidden bg-primary" id="home">
+            <div class="container-fluid">
                 <div class="row d-flex padHome align-items-center">
-                    <div class="col-md-5 col-lg-6 order-0 order-md-1 mt-8 mt-md-0">
-                        <a class="" href="#!">
-                            <img class="img-fluid imgHome teste" src="../assets/img/img-teste2.jpg" alt="hero-header" />
-                        </a>
-                    </div>
-                    <div class="col-md-7 col-lg-6 py-8 text-md-start text-center">
-                        <h1 class="fw-bold fontSizeTile text-light">Are you starving?</h1>
-                        <h1 class="fw-semibold mb-5 fontSizeSubTitle">Within a few clicks, find meals that
-                            <br class="d-none d-xxl-block" />are accessible near you
+                    <div class="zindexText offset-sm-1 offset-lg-1 offset-md-1 col-md-6 col-lg-5 col-sm-11">
+                        <h1 class="fw-bold fontSizeTile">Are you starving?</h1>
+                        <h1 class="fw-semibold fontSizeSubTitle text-light">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id convallis lorem, id
+                            condimentum augue. Duis finibus
+                            consectetur turpis..
                         </h1>
-                        <div class="card w-xxl-75">
-                            <div class="card-body">
-                                <nav>
-                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                        <button class="nav-link active mb-3 colorNaviLink" id="nav-home-tab"
-                                            data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab"
-                                            aria-controls="nav-home" aria-selected="true">
-                                            <i class="fas fa-solid fa-truck me-2"></i>Delivery
-                                        </button>
-                                    </div>
-                                </nav>
-                                <div class="tab-content mt-3" id="nav-tabContent">
-                                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
-                                        aria-labelledby="nav-home-tab">
-                                        <form class="row gx-2 gy-2 align-items-center">
-                                            <div class="col">
-                                                <div class="input-group-icon">
-                                                    <i class="fas fa-map-marker-alt textInputAdress input-box-icon"></i>
-                                                    <label class="visually-hidden" for="inputDelivery">Address</label>
-                                                    <input class="form-control input-box form-foodwagon-control"
-                                                        id="inputDelivery" type="text"
-                                                        placeholder="Enter Your Address" />
-                                                </div>
-                                            </div>
-                                            <div class="d-grid gap-3 col-sm-auto">
-                                                <button class="btn btnDefault" type="submit">Find Food</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="tab-pane fade" id="nav-profile" role="tabpanel"
-                                        aria-labelledby="nav-profile-tab">
-                                        <form class="row gx-4 gy-2 align-items-center">
-                                            <div class="col">
-                                                <div class="input-group-icon"><i
-                                                        class="fas fa-map-marker-alt text-danger input-box-icon"></i>
-                                                    <label class="visually-hidden" for="inputPickup">Address</label>
-                                                    <input class="form-control input-box form-foodwagon-control"
-                                                        id="inputPickup" type="text" placeholder="Enter Your Address" />
-                                                </div>
-                                            </div>
-                                            <div class="d-grid gap-3 col-sm-auto">
-                                                <button class="btn btn-danger" type="submit">Find Food</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    </div>
+                    <div class="col-md-5 col-lg-6 col-sm-12 pe-0">
+                        <a class="" href="#!">
+                            <img class="imgHome teste" src="../assets/img/img-home.webp" alt="hero-header" />
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
-    </main>
+    </main> <!-- END HOME SECTION -->
+
+    <!-- HOW IT WORK SECTION -->
+    <section class="pb-5">
+        <div class="container pb-5">
+            <div class="d-flex justify-content-center">
+                <h5 class="fw-bold fontSizeTile">How does it work</h5>
+            </div>
+            <div class="row">
+                <div class="mt-5 offset-lg-2 offset-md-1 col-lg-2 col-md-5 col-sm-12">
+                    <div class="text-center">
+                        <i class="fa-solid fa-cart-shopping iconsExample"></i>
+                        <h5 class="mt-4 fw-bold">Select location</h5>
+                        <p class="mb-md-0">Choose the location where your food will be delivered.</p>
+                    </div>
+                </div>
+                <div class="mt-5 col-lg-2 col-md-5 col-sm-12">
+                    <div class="text-center">
+                        <i class="fa-solid fa-location-dot iconsExample"></i>
+                        <h5 class="mt-4 fw-bold">Choose order</h5>
+                        <p class="mb-md-0">Check over hundreds of menus to pick your favorite food</p>
+                    </div>
+                </div>
+                <div class="mt-5 offset-md-1 offset-lg-0 col-lg-2 col-md-5 col-sm-12">
+                    <div class="text-center">
+                        <i class="fa-solid fa-truck iconsExample"></i>
+                        <h5 class="mt-4 fw-bold">Pay advanced</h5>
+                        <p class="mb-md-0">It's quick, safe, and simple. Select several methods of payment</p>
+                    </div>
+                </div>
+                <div class="mt-5 col-lg-2 col-md-5 col-sm-12">
+                    <div class="text-center">
+                        <i class="fa-solid fa-sack-dollar iconsExample"></i>
+                        <h5 class="mt-4 fw-bold">Enjoy meals</h5>
+                        <p class="mb-md-0">Food is made and delivered directly to your home.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!-- END HOW IT WORK SECTION -->
+
+    <!-- TRY -->
+    <section class="letsTry">
+        <div class="bgTry"></div>
+        <div class="container">
+            <div class="row containerRow pt-3 pb-3">
+                <div class="col-lg-4 d-flex align-items-center">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <i class="fa-solid fa-handshake-angle iconsTry"></i>
+                        </div>
+                        <div class="col-lg-8">
+                            <p class="textTry">Conexão com o produtor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex align-items-center">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <i class="fa-solid fa-coins iconsTry"></i>
+                        </div>
+                        <div class="col-lg-8">
+                            <p class="textTry">Preços mais atrativos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex align-items-center">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <i class="fa-solid fa-shield iconsTry"></i>
+                        </div>
+                        <div class="col-lg-8">
+                            <p class="textTry">Entrega com segurança</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contentTry text-light">
+                <h2 class="fontSizeSubTitle text-center">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis
+                    augue eget enim scelerisque euismod.
+                </h2>
+                <a class="btnDefault mt-5" href="#">
+                    Experimente
+                    <i class="fa-solid fa-arrow-right ps-1"></i>
+                </a>
+            </div>
+        </div>
+    </section> <!-- END TRY -->
+
+    <!-- FOOTER -->
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <h4>Conexão Agro</h4>
+                    <ul class="linkFooter ps-0">
+                        <li>
+                            <a href="">Sobre nós</a>
+                        </li>
+                        <li>
+                            <a href="">Equipe</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <h4>Contato</h4>
+                    <ul class="linkFooter ps-0">
+                        <li>
+                            <a href="">Suporte</a>
+                        </li>
+                        <li>
+                            <a href="">Seja um produtor parceiro</a>
+                        </li>
+                        <li>
+                            <a href="">Seja um motorista parceiro</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <h4>Licença</h4>
+                    <ul class="linkFooter ps-0">
+                        <li>
+                            <a href="">Termos e condições</a>
+                        </li>
+                        <li>
+                            <a href="">Política de privacidade</a>
+                        </li>
+                        <li>
+                            <a href="">Política de cookie</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-3">
+                <div class="d-flex justify-content-center">
+                    <h4>Siga nossas redeas sociais</h4>
+                </div>
+                <div class="d-flex justify-content-center pt-3 pb-5">
+                    <a href="">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="endFooter pb-5">
+                <span>Todos os direitos reservardos @ConexãoAgro, 2022</span>
+                <span>Feito por: Fernando Bonin</span>
+            </div>
+        </div>
+    </section><!-- END FOOTER -->
 
     <script src="https://kit.fontawesome.com/1865eb5189.js" crossorigin="anonymous"></script>
 </body>

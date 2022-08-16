@@ -61,7 +61,7 @@ nav {
   position: sticky;
   left: 0;
   top: 0;
-  padding: 100px 30px 0 30px;
+  padding: 100px 15px 0 15px;
   background-color: #fff;
 }
 .sideBar input {
@@ -81,7 +81,7 @@ nav {
   font-weight: 200;
 }
 .searchBar {
-  width: 100%;
+  width: 75%;
 }
 .searchBar:focus {
   border: 1px solid #90a955;
@@ -157,7 +157,7 @@ nav {
   font-size: 1em;
   align-self: center;
 }
-.inputQty {
+.inputProdQty {
   width: 45px;
   padding-left: 3px;
 }

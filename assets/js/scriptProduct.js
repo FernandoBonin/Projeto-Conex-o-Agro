@@ -5,11 +5,6 @@ const category = document.getElementById("category");
 const searchBar = document.getElementById("searchBar");
 const elementFilterValue = document.getElementById("filterValue");
 
-// VARIABLES
-let inputProdQty;
-let resultQtyInput;
-let resultCurrency;
-
 // CREAT TEMPLATE
 function creatTemplate(productArr) {
   if ("content" in document.createElement("template")) {
@@ -25,51 +20,50 @@ function creatTemplate(productArr) {
         style: "currency",
         currency: "BRL",
       });
-      let getData = temp.querySelector("img").parentElement.parentElement;
-      getData.setAttribute("data-category", item.categoria);
-      getData.setAttribute("data-name", item.nome);
+
+      // GET VALUE PRODUCTS
+      let totalPrice = temp.querySelector(".totalPrice");
+      temp
+        .querySelector(".inputProdQty")
+        .addEventListener("change", (event) => {
+          const qtyInput = event.target.value;
+          const valueTotal = calculatePrice(qtyInput, item);
+          let totalPriceColor = "red";
+          let totalPriceText = "Digite um valor válido";
+          if (qtyInput > 0) {
+            totalPriceColor = "black";
+            totalPriceText = "Total: " + valueTotal;
+          }
+          totalPrice.style.color = totalPriceColor;
+          totalPrice.innerHTML = totalPriceText;
+        });
+
+      // CART SHOP
+      const qtyProd = temp.querySelector(".inputProdQty");
+      temp.querySelector(".btnShopCart").addEventListener("click", (event) => {
+        productShop.addProduct(item, qtyProd.value);
+        productShop.getProducts();
+
+        console.log(productShop.getProducts());
+      });
 
       cardsArea.appendChild(temp);
     });
   } else {
     console.error("Seu navegador não suporta template");
   }
-
-  // GET VALUE PRODUCTS
-  inputProdQty = document.querySelectorAll(".inputProdQty");
-
-  inputProdQty.forEach((item) => {
-    item.addEventListener("change", getValueInput);
-    function getValueInput() {
-      let totalProduct =
-        item.parentElement.parentElement.parentElement.lastElementChild;
-      let dataName =
-        item.parentElement.parentElement.parentElement.parentElement.getAttribute(
-          "data-name"
-        );
-      let valueInput = item.value;
-
-      products.forEach((item) => {
-        if (dataName == item.nome) {
-          resultQtyInput = valueInput * item.valor;
-          resultCurrency = resultQtyInput.toLocaleString("pt-br", {
-            style: "currency",
-            currency: "BRL",
-          });
-        }
-      });
-      if (valueInput > 0) {
-        totalProduct.style.color = "black";
-        totalProduct.innerHTML = "Total: " + resultCurrency;
-      } else {
-        totalProduct.style.color = "red";
-        totalProduct.innerHTML = "Digite um valor válido";
-      }
-    }
-  });
 }
 
 creatTemplate(products);
+
+// CALCULATE PRODUCT PRICE
+function calculatePrice(qty, product) {
+  const total = product.valor * qty;
+  return total.toLocaleString("pt-br", {
+    style: "currency",
+    currency: "BRL",
+  });
+}
 
 // FORMAT NAME
 function formatName(name) {

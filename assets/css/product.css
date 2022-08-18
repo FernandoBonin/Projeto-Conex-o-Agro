@@ -1,3 +1,16 @@
+/***** GRID *****/
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+.griCardArea {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 10px;
+  grid-column-gap: 5px;
+}
+
 /**** SIDE BAR *****/
 .sideBar {
   width: 100%;
@@ -36,7 +49,9 @@
 /**** CARDS *****/
 #cardsArea {
   margin-top: 80px;
-  margin-left: 10px;
+}
+#cardsArea:last-child {
+  margin-bottom: 15px;
 }
 .cardAreaClass {
   width: 200px;
@@ -93,11 +108,36 @@
 }
 
 /***** MEDIA *****/
-@media (max-width: 650px) {
-  #cardsArea {
-    margin-top: 30px;
+@media (max-width: 1200px) {
+  .gridContainer {
+    grid-template-columns: 1fr 1fr;
   }
+  .griCardArea {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 950px) {
   .sideBar {
     margin-top: 50px;
+    position: relative;
+  }
+  .griCardArea {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 780px) {
+  .griCardArea {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 576px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
+  .griCardArea {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cardAreaClass {
+    margin-left: 30px;
   }
 }

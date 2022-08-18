@@ -4,11 +4,8 @@ class Cart {
   }
   addProduct(product, qty) {
     product.quantidade = qty;
+    //let a = [...new Set(product)];
     this.items.push(product);
-  }
-  checkDuplicate(arr) {
-    let arrNew = [...new Set(arr)];
-    return arrNew;
   }
   getProducts() {
     return this.items;

@@ -44,44 +44,42 @@
     <!--  SEARCH BAR AND PRODUCT LIST  -->
     <main>
         <section>
-            <div class="row">
-                <div class="col-lg-4 col-sm-6 col-12 pe-0">
-                    <div class="sideBar">
-                        <div class="m-3">
-                            <h4>Escolha um de nossos produtos :</h4>
-                        </div>
-                        <div class="m-3">
-                            <span>Escolha uma categoria:</span>
-                        </div>
-                        <select id="category" class="form-select form-select-md">
-                            <option selected>Categorias</option>
-                            <option value="verdura">Verduras</option>
-                            <option value="legume">Legumes</option>
-                            <option value="fruta">Frutas</option>
-                            <option value="grao">Grãos</option>
-                        </select>
-                        <div class="input-group mt-5 m-3">
-                            <span>Ou se preferir pesquise o proprio item:</span>
-                        </div>
-                        <div class="mt-2">
-                            <input id="searchBar" class="form-control  searchBar" placeholder="Ex: alface"
-                                type="search">
-                        </div>
-                        <div class="m-3 mt-5">
-                            <span>Filtre nossos produtos pelos valores:</span>
-                        </div>
-                        <select id="filterValue" class="form-select form-select-md">
-                            <option value="">Filtro</option>
-                            <option value="1">Do menor ao maior valor</option>
-                            <option value="2">Do maior ao menor valor</option>
-                        </select>
+            <div class="gridContainer">
+                <div class="sideBar">
+                    <div class="m-3">
+                        <h4>Escolha um de nossos produtos :</h4>
                     </div>
+                    <div class="m-3">
+                        <span>Escolha uma categoria:</span>
+                    </div>
+                    <select id="category" class="form-select form-select-md">
+                        <option selected>Categorias</option>
+                        <option value="verdura">Verduras</option>
+                        <option value="legume">Legumes</option>
+                        <option value="fruta">Frutas</option>
+                        <option value="grao">Grãos</option>
+                    </select>
+                    <div class="input-group mt-5 m-3">
+                        <span>Ou se preferir pesquise o proprio item:</span>
+                    </div>
+                    <div class="mt-2">
+                        <input id="searchBar" class="form-control  searchBar" placeholder="Ex: alface" type="search">
+                    </div>
+                    <div class="m-3 mt-5">
+                        <span>Filtre nossos produtos pelos valores:</span>
+                    </div>
+                    <select id="filterValue" class="form-select form-select-md">
+                        <option value="">Filtro</option>
+                        <option value="1">Do menor ao maior valor</option>
+                        <option value="2">Do maior ao menor valor</option>
+                    </select>
                 </div>
 
-                <div class="col-lg-8 col-sm-6 col-12 pe-0 ps-0">
-                    <div class="row me-0" id="cardsArea">
+
+                <div class="pe-0 ps-0">
+                    <div class="griCardArea me-0" id="cardsArea">
                         <template id="templateCards">
-                            <div class="col-lg-4 col-sm-2 col-6 cardAreaClass p-0 m-2">
+                            <div class="cardAreaClass p-0">
                                 <div class="p-0 imgArea">
                                     <img class="imgCard">
                                 </div>

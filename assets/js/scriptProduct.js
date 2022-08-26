@@ -40,11 +40,20 @@ function creatTemplate(productArr) {
 
       // CART SHOP
       const qtyProd = temp.querySelector(".inputProdQty");
-      temp.querySelector(".btnShopCart").addEventListener("click", (event) => {
-        productShop.addProduct(item, qtyProd.value);
-        productShop.getProducts();
+      temp.querySelector(".btnShopCart").addEventListener("click", () => {
+        let qtyProdValue = qtyProd.value;
+        if (qtyProdValue <= 0) return alert("Digite uma quantidade válida");
 
-        console.log(productShop.getProducts());
+        productShop.addProduct(item, qtyProdValue);
+
+        console.log(
+          productShop.getProducts(),
+          "----------",
+          productShop.getTotalPriceCart()
+        );
+
+        totalPrice.innerHTML = "";
+        qtyProd.value = 0;
       });
 
       cardsArea.appendChild(temp);

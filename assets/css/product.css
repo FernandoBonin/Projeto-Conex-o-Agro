@@ -2,7 +2,7 @@
 .gridContainer {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 20px;
+  grid-column-gap: 15px;
 }
 .griCardArea {
   display: grid;
@@ -19,7 +19,7 @@
   position: sticky;
   left: 0;
   top: 0;
-  padding: 100px 15px 0 15px;
+  padding: 100px 10px 0 10px;
   background-color: #fff;
 }
 .sideBar input {

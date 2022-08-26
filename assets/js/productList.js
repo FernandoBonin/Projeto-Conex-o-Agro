@@ -1,4 +1,4 @@
-let products = [
+var products = [
   {
     nome: "Kilo de Laranja",
     valor: 4,
